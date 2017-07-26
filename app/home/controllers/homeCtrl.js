@@ -5,9 +5,9 @@ homeCtrl.$inject = ['$scope', 'homeService'];
 function homeCtrl($scope, homeService) {
 	
 	$scope.getFeeds = function() {
+		// differentiate displayedFeeds from feeds to manage the display limit
 		$scope.feeds = homeService.data;
 		$scope.displayedFeeds = $scope.feeds.slice(0, 10);
-		console.log($scope.displayedFeeds.length);
 	};
 
 	$scope.loadMoreFeeds = function() {
@@ -16,7 +16,6 @@ function homeCtrl($scope, homeService) {
 		} else {
 			$scope.displayedFeeds = $scope.feeds.slice(0, 50);
 		}
-		console.log($scope.displayedFeeds.length);
 	};
 
 	$scope.filterByDesc = function() {
@@ -32,7 +31,6 @@ function homeCtrl($scope, homeService) {
 			}
 		});
 		$scope.displayedFeeds = $scope.feeds.slice(0, 10);
-		console.log($scope.displayedFeeds.length);
 	};
 
 	$scope.filterByLikes = function() {
@@ -43,6 +41,5 @@ function homeCtrl($scope, homeService) {
 			return true;
 		});
 		$scope.displayedFeeds = $scope.feeds.slice(0, 10);
-		console.log($scope.displayedFeeds.length);
 	};
 }
