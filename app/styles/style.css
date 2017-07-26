@@ -1,0 +1,25 @@
+.media-footer {
+	margin-top: 10px;
+}
+.feed-action {
+	min-width: 80px;
+	padding: 5px;
+	color: #657786;
+    font-size: 16px;
+}
+
+.roundedImage{
+    overflow:hidden;
+    -webkit-border-radius:35px;
+    -moz-border-radius:35px;
+    border-radius:35px;
+    width:75px;
+    height:75px;
+}
+
+.input-group {
+	width: 100%;
+}
+.btn-more {
+	margin-bottom: 20px;
+}
